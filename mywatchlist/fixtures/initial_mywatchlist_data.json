@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 1,
+        "fields": {
+            "watched": "Yes",
+            "title": "Toy Story",
+            "rating": 4.2,
+            "release_date": "November 22nd, 1995",
+            "review": "Timeless classic, the start of a legendary era of computer-animated films."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 2,
+        "fields": {
+            "watched": "Yes",
+            "title": "A Bug's Life",
+            "rating": 3.6,
+            "release_date": "November 25th, 1998",
+            "review": "Fairs well compared to rival movie 'Antz'."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 3,
+        "fields": {
+            "watched": "Yes",
+            "title": "Toy Story 2",
+            "rating": 4.0,
+            "release_date": "November 24th, 1999",
+            "review": "Despite massive production difficulties, it was a huge success."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 4,
+        "fields": {
+            "watched": "Yes",
+            "title": "Monsters, Inc.",
+            "rating": 4.1,
+            "release_date": "November 2nd, 2001",
+            "review": "Clever, funny, and delightful to look at."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 5,
+        "fields": {
+            "watched": "Yes",
+            "title": "Finding Nemo",
+            "rating": 4.1,
+            "release_date": "May 30th, 2003",
+            "review": "The best film for both parents and kids to watch."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 6,
+        "fields": {
+            "watched": "Yes",
+            "title": "The Incredibles",
+            "rating": 4.0,
+            "release_date": "November 5th, 2004",
+            "review": "Alternates breakneck action with the funny satire of suburban sitcom life."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 7,
+        "fields": {
+            "watched": "Yes",
+            "title": "Cars",
+            "rating": 3.6,
+            "release_date": "June 9th, 2006",
+            "review": "One of Pixar's most imaginative and thoroughly appealing movies ever."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 8,
+        "fields": {
+            "watched": "Yes",
+            "title": "Ratatouille",
+            "rating": 4.1,
+            "release_date": "June 29th, 2007",
+            "review": "It serves a heartfelt storyline and a powerful message."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 9,
+        "fields": {
+            "watched": "Yes",
+            "title": "WALL-E",
+            "rating": 4.2,
+            "release_date": "June 27th, 2008",
+            "review": "It delves into important topic like consumerism and human environmental impact."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 10,
+        "fields": {
+            "watched": "Yes",
+            "title": "Up",
+            "rating": 4.2,
+            "release_date": "May 29th, 2009",
+            "review": "A film with darker heartbreaks, but still manages to be exciting and warm."
+        }
+    }
+]
