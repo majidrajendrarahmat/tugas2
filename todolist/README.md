@@ -45,7 +45,7 @@ Jelaskan tag HTML5 yang kamu ketahui?
 dan lain-lain
   
 Jelaskan tipe-tipe CSS selector yang kamu ketahui?
-1. Element Selector: Menggunakan elemen HTML seperti <h1>, <h2>, <p> sebagai selector untuk mengcustomize body dokumen HTML
+1. Element Selector: Menggunakan elemen HTML seperti "<h1>", "<h2>", "<p>" sebagai selector untuk mengcustomize body dokumen HTML
 2. ID Selector: Menggunakan ID sebagai selector. ID bersiat unik sehingga elemen tanpa ID tidak akan terpengaruh.
 3. Class Selector: Mix dari Element dan ID Selector. Dapat mengcustomize tampilan dengan menambahkan "class=" walaupun beda elemen.
   
