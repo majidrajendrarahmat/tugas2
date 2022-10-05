@@ -34,18 +34,18 @@ Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan ke
 Secara singkat, Inline style CSS menerapkan properti style CSS di dalam elemen tag secara langsung. Sehingga, tidak dibutuhkan pembuatan tag style pada bagian        kepala HTML. Internal style memuatkan properti styling pada kepala HTML dan assign properti itu ke sebuah selector. Lalu menggunakan tag <div>, user dapat customize bagian spesifik itu berdasarkan <style> yang berada di bagian kepala tadi. Pada external style, seluruh hal styling dilakukan di file yang berbeda. Di bagian kepala HTML, diberi <link> untuk mengasih reference styling ke HTML tersebut. Bagian body dicustomize menggunakan <div>
   
 Jelaskan tag HTML5 yang kamu ketahui?
-<!DOCTYPE html>: tipe dokumen adalah HTML
-<head>: kepala dari HTML, berisi metadata dokumen
-<body>: berisi hal-hal yang akan ditampilkan dalam dokumen HTML-nya
-<style>: berisi styling css untuk mengcustomize dokumen
-<div>: membagikan bagian body dokumen menjaid berbagai divisi. Membantu dalam customization
-<br>: Single line break
-<h#>: header text. text lebih besar
-<p>: paragraf
+!DOCTYPE html: tipe dokumen adalah HTML
+head: kepala dari HTML, berisi metadata dokumen
+body: berisi hal-hal yang akan ditampilkan dalam dokumen HTML-nya
+style: berisi styling css untuk mengcustomize dokumen
+div: membagikan bagian body dokumen menjaid berbagai divisi. Membantu dalam customization
+br: Single line break
+h#: header text. text lebih besar
+p: paragraf
 dan lain-lain
   
 Jelaskan tipe-tipe CSS selector yang kamu ketahui?
-1. Element Selector: Menggunakan elemen HTML seperti "<h1>", "<h2>", "<p>" sebagai selector untuk mengcustomize body dokumen HTML
+1. Element Selector: Menggunakan elemen HTML seperti h1, h2, p sebagai selector untuk mengcustomize body dokumen HTML
 2. ID Selector: Menggunakan ID sebagai selector. ID bersiat unik sehingga elemen tanpa ID tidak akan terpengaruh.
 3. Class Selector: Mix dari Element dan ID Selector. Dapat mengcustomize tampilan dengan menambahkan "class=" walaupun beda elemen.
   
