@@ -27,11 +27,11 @@ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas?
   models.ForeignKey agar halaman utama dapat mengdisplay.
 
   
-  
+  ==================================================================================================================================================================
   
   
 Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
-Secara singkat, Inline style CSS menerapkan properti style CSS di dalam elemen tag secara langsung. Sehingga, tidak dibutuhkan pembuatan tag style pada bagian        kepala HTML. Internal style memuatkan properti styling pada kepala HTML dan assign properti itu ke sebuah selector. Lalu menggunakan tag <div>, user dapat customize bagian spesifik itu berdasarkan <style> yang berada di bagian kepala tadi. Pada external style, seluruh hal styling dilakukan di file yang berbeda. Di bagian kepala HTML, diberi <link> untuk mengasih reference styling ke HTML tersebut. Bagian body dicustomize menggunakan <div>
+Secara singkat, Inline style CSS menerapkan properti style CSS di dalam elemen tag secara langsung. Sehingga, tidak dibutuhkan pembuatan tag style pada bagian        kepala HTML. Internal style memuatkan properti styling pada kepala HTML dan assign properti itu ke sebuah selector. Lalu menggunakan tag div, user dapat customize bagian spesifik itu berdasarkan style yang berada di bagian kepala tadi. Pada external style, seluruh hal styling dilakukan di file yang berbeda. Di bagian kepala HTML, diberi tag link untuk mengasih reference styling ke HTML tersebut. Bagian body dicustomize menggunakan tag div
   
 Jelaskan tag HTML5 yang kamu ketahui?
 !DOCTYPE html: tipe dokumen adalah HTML
