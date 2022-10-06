@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 
  {% block content %}
+<div class = "center">
+  <h1 style= "font-size: 53px;">Tugas 4 PBP</h1>
 
-  <h1>Tugas 4 PBP</h1>
+  <br>
+  <br>
 
-  <h5>Username: </h5>
+  <h5 style= "font-size: 15px;">Username: </h5>
   <p>{{user}}</p>
 
-  <table>
+  <br>
+  <br>
+
+  <table id="tablecenter">
     <tr>
       <th>Task Creation Date</th>
       <th>Task Title</th>
@@ -16,14 +22,15 @@
     {% comment %} Add the data below this line {% endcomment %}
     {% for task in task_list %}
         <tr>
-            <th>{{task.date}}</th>
-            <th>{{task.title}}</th>
-            <th>{{task.description}}</th>
+            <td>{{task.date}}</td>
+            <td>{{task.title}}</td>
+            <td>{{task.description}}</td>
         </tr>
     {% endfor %}
   </table>
+  <br>
 
   <button><a href="{% url 'todolist:add_task' %}">Add Task</a></button>
   <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
-
+</div>
  {% endblock content %}

@@ -6,26 +6,28 @@
 
 {% block content %}
 
-<div class = "login">
-
-    <h1>Login</h1>
-
+<div class = "center">
+    <br>
+    <h1 style= "font-size: 70px;">Login</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <form method="POST" action="">
         {% csrf_token %}
-        <table>
+        <table id="tablecenter">
             <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
+                <td><input type="text" name="username" placeholder="Username" class="form-control" style="width: 95%; text-align: center"></td>
             </tr>
                     
             <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
+                <td><input type="password" name="password" placeholder="Password" class="form-control" style="width: 95%; text-align: center"></td>
             </tr>
 
             <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
+                <td><input class="btn login_btn" type="submit" value="Login" style="text-align: center"></td>
             </tr>
         </table>
     </form>
@@ -37,7 +39,10 @@
             {% endfor %}
         </ul>
     {% endif %}     
-        
+    <br>
+    <br>
+    <br>
+
     Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
 
 </div>
