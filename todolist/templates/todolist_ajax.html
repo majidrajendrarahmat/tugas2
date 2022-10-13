@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+ <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 45%;
+      max-height: 1200px;
+      display: inline-block;
+      margin: 20px 29px;
+      background-color: #dcedc1;
+      border-radius: 15px;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    .container {
+      padding: 50px 10px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30%;
+    }
+
+    button{
+      background-color: bisque;
+    }
+ </style>
+
+<h1>Assignment 6 PBP/PBD</h1>
+
+<h4>Username: {{user}}</h4>
+
+<div id="ajaxCard"></div>
+
+<br></br>
+<button><a href="{% url 'todolist:show_todolist' %}">Lihat dalam Tabel</a></button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add task</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">New Task</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formtask">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Title:</label>
+            <input type="text" class="form-control" id="field_title" name="judul">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Description:</label>
+            <textarea class="form-control" id="field_desc" name="deskripsi"></textarea>
+          </div>
+        </form>
+      </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="addtaskbutton" data-bs-dismiss="modal">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  async function getTodolist(){
+    return fetch("{% url 'todolist:show_json' %}").then((res) => res.json())
+  }
+
+  async function refreshTodolist(){
+    document.getElementById("ajaxCard").innerHTML = ""
+    const todolist = await getTodolist()
+    let htmlString = ``
+    todolist.forEach(item=> {
+      htmlString+=`\n
+      <div class="card">
+        <div class="container">
+          <h4><b>Tanggal Pembuatan Tugas</b></h4>
+          <p>${item.fields.date}</p>
+          <h4>Judul Tugas</h4>
+          <p>${item.fields.title}</p>
+          <h4>Deskripsi Tugas</h4>
+      `
+    });
+    document.getElementById("ajaxCard").innerHTML = htmlString
+  }
+  
+  async function addTask() {
+    fetch("{% url 'todolist:add_ajax' %}", {
+          method: "POST",
+          body: new FormData(document.querySelector('#formtask'))
+      }).then(refreshTodolist)
+    return false
+  }
+  document.getElementById("addtaskbutton").onclick = addTask
+  refreshTodolist()
+
+
+
+</script>
+ {% endblock content %}

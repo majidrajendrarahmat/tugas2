@@ -10,6 +10,8 @@ from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.http import HttpResponse, HttpResponseNotFound
+from django.core import serializers
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -72,3 +74,22 @@ def add_task(request):
     
     context = {'form':form}
     return render(request, 'add_task_todolist.html', context)
+
+def add_ajax(request):
+    if request.method == 'POST':
+        title = request.POST.get("judul")
+        deskripsi = request.POST.get("deskripsi")
+
+        new_todolist = Task(title=title, description=deskripsi, user=request.user)
+        new_todolist.save()
+
+        return HttpResponse(b"CREATED", status=201)
+
+    return HttpResponseNotFound()
+
+def show_ajax(request):
+    return render(request, "todolist_ajax.html")
+
+def show_json(request):
+    data_todolist = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data_todolist))
